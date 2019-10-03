@@ -15,15 +15,14 @@ firebase.initializeApp(firebaseConfig);
 var database = firebase.database();
 
 
-
 $("#new-employee-submit").on("click", function (event) {
     event.preventDefault();
 
 
     name = $("#new-employee-name").val().trim();
-    role = $("#new-employee-role").val().trim();
-    startdate = $("#email-start-date").val().trim();
-    monthlyrate = $("#email-monthly-rate").val().trim();
+    role = $("#new-employee-role").val();
+    startdate = $("#new-employee-start-date").val();
+    monthlyrate = $("#new-employee-monthly-rate").val();
 
     // Don't forget to provide initial data to your Firebase database.
     database.ref().push({
